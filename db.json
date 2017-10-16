@@ -1,0 +1,68 @@
+{
+  "products": [{
+      "id": 1,
+      "name": "Sandalia Pale Gold YSL",
+      "category": "Indumentaria",
+      "price": 800,
+      "discount": null,
+      "src": "http://i64.tinypic.com/2eggu35.png"
+    },
+    {
+      "id": 2,
+      "name": "Gafas Guess",
+      "category": "Accesorios",
+      "price": 3500,
+      "discount": 25,
+      "src": "http://i63.tinypic.com/2lj5d1w.png"
+    },
+    {
+      "id": 3,
+      "name": "Iphone 7 Case Sea-Blue",
+      "category": "Accesorios",
+      "price": 500,
+      "discount": null,
+      "src": "http://i65.tinypic.com/vevk75.png"
+    },
+    {
+      "id": 4,
+      "name": "Zapatillas Dolce&Gabbana",
+      "category": "Indumentaria",
+      "price": 2940,
+      "discount": null,
+      "src": "http://i65.tinypic.com/1jn88w.png"
+    },
+    {
+      "id": 5,
+      "name": "Kylie Cosmetics KOKO Collection",
+      "category": "Salud y Belleza",
+      "price": 1300,
+      "discount": null,
+      "src": "http://i67.tinypic.com/25ho2nk.png"
+    },
+    {
+      "id": 6,
+      "name": "Campera Teddy Rosa YSL",
+      "category": "Indumentaria",
+      "price": 1800,
+      "discount": null,
+      "src": "http://i68.tinypic.com/2udztom.png"
+
+    },
+    {
+      "id": 7,
+      "name": "Channel",
+      "category": "Indumentaria",
+      "price": 18000,
+      "discount": 10,
+      "src": "http://i65.tinypic.com/2yuk6yw.png"
+    },
+    {
+      "id": 8,
+      "name": "Campera Cuero Blood Luster YSL",
+      "category": "Indumentaria",
+      "price": 128800,
+      "discount": null,
+      "src": "http://i67.tinypic.com/33a8p5d.png"
+    }
+  ]
+}
