@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import upIcon from "../assets/images/up-icon.png";
 import downIcon from "../assets/images/down-icon.png";
 import bagIcon from "../assets/images/bag-icon.png";
-import circle from "../assets/images/circle.png";
 import ProductsList from "./products_list"
 
 
@@ -17,11 +16,13 @@ class Grid extends Component {
 
     }
 
+
     this.sortUp.bind(this)
   }
 
 
   componentWillMount() {
+
 
   fetch("http://localhost:8000/products")
 
@@ -34,6 +35,8 @@ class Grid extends Component {
 
   })
 }
+
+
 
 
 sortUp(){

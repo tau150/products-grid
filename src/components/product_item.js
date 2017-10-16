@@ -7,14 +7,9 @@ class ProductItem extends Component  {
   constructor(props){
     super(props);
 
-   discountMessage:''
-   swap_icon:''
-   mask:''
-
    this.state = {
      available: false
    };
-
 
 
   if (this.props.product.discount) {
