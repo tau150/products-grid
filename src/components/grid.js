@@ -41,8 +41,8 @@ class Grid extends Component {
 
 sortUp(){
   let sortedUpProducts =   this.state.products.sort(function(a, b){
-     var keyA = a.price
-     var keyB = b.price
+     let keyA = a.price
+     let keyB = b.price
      // Compare the 2 dates
      if(keyA < keyB) return -1;
      if(keyA > keyB) return 1;
