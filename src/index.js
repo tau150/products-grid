@@ -1,19 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './components/header';
-import Grid from './components/grid';
-
-const App = () => {
-
-return(
-    <div className='container-fluid'>
-      <Header />
-      <Grid />
-    </div>
-    )
-
-}
 
 
+  import React from 'react';
+  import { render } from 'react-dom';
+  import { Provider } from 'react-redux';
+  import App from './components/app';
+  import configureStore from './store/configure_store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+  const store = configureStore(); // You can also pass in an initialState here
+
+  render(
+      <Provider store={store}>
+          <App />
+      </Provider>,
+      document.getElementById('root'));

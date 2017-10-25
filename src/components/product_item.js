@@ -2,18 +2,18 @@ import React, {Component} from 'react';
 import bagIconWhite from "../assets/images/bag-icon-white.png";
 import coin from "../assets/images/coin.png";
 import ProductMask from "./product_mask";
+import { connect } from 'react-redux';
+
+
+
 
 class ProductItem extends Component  {
-  constructor(props){
-    super(props);
 
-   this.state = {
-     available: false
-   };
 
+render(){
 
   if (this.props.product.discount) {
-    this.discountMessage = `${ props.product.discount }% OFF en `
+    this.discountMessage = `${ this.props.product.discount }% OFF en `
   }
 
   if (this.props.available_money >= this.props.product.price) {
@@ -31,26 +31,21 @@ class ProductItem extends Component  {
     )
   }
 
-}
+  let available=false;
 
-componentDidMount(){
-  if (this.props.available_money >= this.props.product.price) {
-    this.setState({
-      available:true
-    })
+  if( this.props.available_money >= this.props.product.price ){
+    available=true;
   }
-}
 
-render(){
+
   return(
 
       <div className="col-12 col-sm-12 col-md-6 col-lg-3" >
-
         <div className='container-product'>
-            <div className='container-img-product'>
-              { this.state.available ? <ProductMask product={this.props.product} /> : null }
-              <img className='img-fluid img-product' src={this.props.product.src} alt=""/>
-            </div>
+         <div className='container-img-product'>
+            { available ? <ProductMask product={this.props.product} /> : null }
+            <img className='img-fluid img-product' src={this.props.product.src} alt=""/>
+           </div>
             { this.swap_icon}
             <h6>  {this.discountMessage}  {this.props.product.name} </h6>
             <p className='category'> {this.props.product.category } </p>
@@ -61,6 +56,19 @@ render(){
 
 }
 
+
 }
 
-export default ProductItem
+
+const mapStateToProps= (state)=>{
+
+  return {
+    available_money: state.user.available_money
+
+  }
+
+}
+
+
+
+export default  connect(mapStateToProps ) (ProductItem);

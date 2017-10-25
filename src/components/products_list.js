@@ -1,19 +1,20 @@
 import React from 'react';
 import ProductItem from './product_item'
 
+
 const ProductsList = (props) => {
+    const productsItems = props.products.map((product) => {
+        return <ProductItem key={product.id} product={product} />
 
-const ProductsList = props.products.map((product)=>{
-  return <ProductItem product={product} key={product.id} available_money={props.available_money} />
-})
+            });
 
-    return(
-      <div className="row products-list">
-              {ProductsList}
-      </div>
-    )
+              return(
+                <div className="container">
+                  <div className="row products-list">
+                      {productsItems}
+                  </div>
+                </div>
+                )
+};
 
-}
-
-
-export default ProductsList
+export default ProductsList;
