@@ -90,7 +90,3 @@ const mapDispatchToProps = (dispatch) => {
 
 
 export default connect(mapStateToProps, mapDispatchToProps )(Grid);
-
-
-  // <img className ='grid-icon'  src={upIcon} onClick={ ()=> this.props.sortUp(this.props.products)} alt="" />
-  // <img className ='grid-icon'  src={downIcon} onClick={ ()=> this.props.sortDown()} alt="" />
